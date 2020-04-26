@@ -1,13 +1,12 @@
 {
   "name": "twnd",
   "description": "A simple utility for compiling a readable list of tailwindcss classes",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scripts": {
     "build": "pika build",
     "prepublish": "npm run build",
     "publish": "pika publish",
-    "test": "jest ./src",
-    "version": "npm run build"
+    "test": "jest ./src"
   },
   "license": "MIT",
   "repository": {
