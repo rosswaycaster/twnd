@@ -1,6 +1,6 @@
 # twnd
 
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+[![npm version](https://badge.fury.io/js/twnd.svg)](https://www.npmjs.com/package/twnd) ![npm bundle size](https://img.shields.io/bundlephobia/min/twnd?color=important) ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg) ![HitCount](http://hits.dwyl.com/rosswaycaster/twnd.svg)
 
 A simple utility for compiling a readable list of tailwindcss classes.
 
