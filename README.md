@@ -4,29 +4,43 @@
 
 A simple utility for compiling a readable list of tailwindcss classes.
 
+The goal of `twnd` is to provide an easy way to manage and compose tailwindcss classes.
+
+```jsx
+twnd(
+  'bg-gray-200 rounded text-gray-700',
+  'hover: bg-white border-gray-300',
+  'focus: bg-white',
+  'lg: px-4 py-2',
+  'lg:hover: bg-gray-100 text-gray-600'
+)
+
+// bg-gray-200 rounded text-gray-700 hover:bg-white hover:border-gray-300 focus:bg-white lg:px-4 lg:py-2 lg:hover:bg-gray-100 lg:hover:text-gray-600
+```
+
 ## Installation
 
-```
-// npm
-npm install twnd --save
-
+```jsx
 // yarn
 yarn add twnd
+
+// npm
+npm install twnd --save
 ```
 
 ## Usage
 
-```
-var twnd = require('twnd')
+```jsx
+import twnd from 'twnd'
 
 or
 
-import twnd from 'twnd'
+var twnd = require('twnd')
 ```
 
 ---
 
-`twnd` is a function that can take as many arguments as you would like. The arguments should either be `strings` or `arrays`. Nested arrays are okay too!
+`twnd` is a function that take an infinite amount of arguments. These arguments should either be `strings` or `arrays`. Nested arrays are okay too!
 
 #### Strings
 
@@ -34,7 +48,7 @@ Strings **without** a prefix (`hover:`, `focus:`, `lg:`, `lg:hover:`...) are out
 
 For example:
 
-```
+```jsx
 const Button = ({ children, warning, border }) => {
   return (
     <button
@@ -54,12 +68,10 @@ const Button = ({ children, warning, border }) => {
 
 is the same as typing out all of these classes:
 
-```
+```jsx
 const Button = ({ children, warning, border }) => {
   return (
-    <button
-      className="ml-4 flex-shrink-0 bg-teal-500 text-white font-bold py-2 px-4 rounded hover:bg-teal-600 focus:outline-none focus:shadow-outline lg:ml-0 lg:py-0 lg:px-0 lg:hover:uppercase lg:hover:text-teal-300"
-    >
+    <button className="ml-4 flex-shrink-0 bg-teal-500 text-white font-bold py-2 px-4 rounded hover:bg-teal-600 focus:outline-none focus:shadow-outline lg:ml-0 lg:py-0 lg:px-0 lg:hover:uppercase lg:hover:text-teal-300">
       {children}
     </button>
   )
@@ -70,7 +82,7 @@ const Button = ({ children, warning, border }) => {
 
 In this example we will use React to build a `Button` component that accepts `rounded` and `border` props. As you can see, you can easily apply specific classes based on if the prop is truthy or not.
 
-```
+```jsx
 const Button = ({ children, rounded, border }) => {
   return (
     <button
@@ -92,7 +104,7 @@ const Button = ({ children, rounded, border }) => {
 
 You can also use `twnd` to compose styles.
 
-```
+```jsx
 const Button = ({ children, buttonStyle = 'default', rounded, border }) => {
   const baseStyles = twnd(
     'appearance-none py-2 px-4 leading-tight border',
@@ -121,14 +133,18 @@ const Button = ({ children, buttonStyle = 'default', rounded, border }) => {
 
 ##### Output
 
-```
+```jsx
 // <Button rounded border>Login</Button>
 
-<button class="appearance-none py-2 px-4 leading-tight border lg:text-lg lg:py-4 lg:px-6 rounded bg-gray-200 text-gray-700 hover:bg-gray-400 hover:text-gray-900 border-gray-500 hover:border-gray-700">Login</button>
+<button class="appearance-none py-2 px-4 leading-tight border lg:text-lg lg:py-4 lg:px-6 rounded bg-gray-200 text-gray-700 hover:bg-gray-400 hover:text-gray-900 border-gray-500 hover:border-gray-700">
+  Login
+</button>
 ```
 
-```
+```jsx
 // <Button buttonStyle="warning" border>Login</Button>
 
-<button class="appearance-none py-2 px-4 leading-tight border lg:text-lg lg:py-4 lg:px-6 bg-red-200 text-red-700 hover:bg-red-400 hover:text-red-900 border-red-500 hover:border-red-900">Login</button>
+<button class="appearance-none py-2 px-4 leading-tight border lg:text-lg lg:py-4 lg:px-6 bg-red-200 text-red-700 hover:bg-red-400 hover:text-red-900 border-red-500 hover:border-red-900">
+  Login
+</button>
 ```

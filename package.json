@@ -1,7 +1,7 @@
 {
   "name": "twnd",
   "description": "A simple utility for compiling a readable list of tailwindcss classes",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "scripts": {
     "build": "pika build",
     "release": "pika build && cd pkg && npm login && npm publish",
