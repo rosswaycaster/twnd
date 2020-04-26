@@ -26,4 +26,4 @@ const twnd = (...args) =>
     }, '')
     .trim()
 
-export default twnd
+export { twnd as default, twnd }

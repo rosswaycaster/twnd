@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.twnd = exports["default"] = void 0;
 
 // Helper function to flatten the array since [].flat() isn't standard yet
 var _flatten = function _flatten(ary) {
@@ -40,5 +40,4 @@ var twnd = function twnd() {
   }, '').trim();
 };
 
-var _default = twnd;
-exports["default"] = _default;
+exports.twnd = exports["default"] = twnd;
