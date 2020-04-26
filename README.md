@@ -1,6 +1,6 @@
 # twnd
 
-[![npm version](https://badge.fury.io/js/twnd.svg)](https://www.npmjs.com/package/twnd) ![npm bundle size](https://img.shields.io/bundlephobia/min/twnd?color=important) ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg) ![HitCount](http://hits.dwyl.com/rosswaycaster/twnd.svg)
+[![npm](https://img.shields.io/npm/v/twnd?color=success)](https://www.npmjs.com/package/twnd) [![npm bundle size](https://img.shields.io/bundlephobia/min/twnd?color=brightgreen)](https://www.npmjs.com/package/twnd) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/rosswaycaster/twnd/blob/master/LICENSE)
 
 A simple utility for compiling a readable list of tailwindcss classes.
 
@@ -148,3 +148,7 @@ const Button = ({ children, buttonStyle = 'default', rounded, border }) => {
   Login
 </button>
 ```
+
+---
+
+👋 ![HitCount](http://hits.dwyl.com/rosswaycaster/twnd.svg)
