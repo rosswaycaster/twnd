@@ -1,0 +1,47 @@
+{
+  "name": "twnd",
+  "description": "A simple utility for compiling a readable list of tailwindcss classes",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "pika build",
+    "prepublish": "npm run build",
+    "publish": "pika publish",
+    "test": "jest ./src"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rosswaycaster/twnd.git"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg",
+        {
+          "exclude": [
+            "__tests__/*"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-node": "^0.3.4",
+    "@pika/plugin-build-types": "^0.3.4",
+    "@pika/plugin-build-web": "^0.3.4",
+    "@pika/plugin-bundle-web": "^0.3.4",
+    "@pika/plugin-standard-pkg": "^0.3.4",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^25.4.0",
+    "jest": "^25.4.0"
+  }
+}
