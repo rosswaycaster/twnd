@@ -4,10 +4,8 @@
   "version": "0.0.9",
   "scripts": {
     "build": "pika build",
-    "prepublish": "npm run build",
-    "publish": "pika publish",
-    "test": "jest ./src",
-    "version": "npm run build"
+    "release": "pika build && cd pkg && npm login && npm publish",
+    "test": "jest ./src"
   },
   "license": "MIT",
   "repository": {
